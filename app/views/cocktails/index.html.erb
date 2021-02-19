@@ -1,0 +1,13 @@
+<h1>This is the index view of cocktails</h1>
+
+<h2>Welcome to <strong>No alcohol</strong> cocktails!</h2>
+<h2>here are the available cocktails to order</h2>
+
+<ul>
+  <% @cocktails.each do |cocktail| %>
+    <li>
+      <%= link_to cocktail.name, cocktail_path(cocktail.id) %>
+    </li>
+  <% end %>
+</ul>
+<%= link_to 'Create your cocktail!', new_cocktail_path %>
